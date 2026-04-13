@@ -26,13 +26,13 @@ public class LoginFrame extends JFrame {
 
         setLayout(new BorderLayout());
 
-        // Panel atas
+        
         JLabel lblTitle = new JLabel("Selamat Datang!");
         lblTitle.setFont(new Font("Arial", Font.BOLD, 20));
         lblTitle.setHorizontalAlignment(JLabel.CENTER);
         add(lblTitle, BorderLayout.NORTH);
 
-        // Panel tengah
+        
         JPanel panel = new JPanel(new GridLayout(5, 2, 5, 5));
 
         panel.add(new JLabel("Username"));
@@ -59,11 +59,11 @@ public class LoginFrame extends JFrame {
 
         add(panel, BorderLayout.CENTER);
 
-        // Tombol
+        
         btnLogin = new JButton("Login");
         add(btnLogin, BorderLayout.SOUTH);
 
-        // Event Login
+        
         btnLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String username = tfUsername.getText();

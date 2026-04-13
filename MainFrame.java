@@ -24,13 +24,13 @@ public class MainFrame extends JFrame {
 
         setLayout(new BorderLayout());
 
-        // Header
+        
         JLabel lblWelcome = new JLabel("Welcome, " + gender + " " + username);
         lblWelcome.setFont(new Font("Arial", Font.BOLD, 16));
         lblWelcome.setHorizontalAlignment(JLabel.CENTER);
         add(lblWelcome, BorderLayout.NORTH);
 
-        // Input Panel
+        
         JPanel inputPanel = new JPanel(new GridLayout(3, 2, 5, 5));
 
         inputPanel.add(new JLabel("Panjang"));
@@ -47,7 +47,7 @@ public class MainFrame extends JFrame {
 
         add(inputPanel, BorderLayout.CENTER);
 
-        // Tombol Panel
+        
         JPanel buttonPanel = new JPanel(new FlowLayout());
 
         JButton btnHitung = new JButton("Hitung");
@@ -58,7 +58,7 @@ public class MainFrame extends JFrame {
 
         add(buttonPanel, BorderLayout.SOUTH);
 
-        // Hasil Panel
+        
         JPanel hasilPanel = new JPanel(new GridLayout(4, 2));
 
         hasilPanel.add(new JLabel("Luas Persegi"));
@@ -79,7 +79,7 @@ public class MainFrame extends JFrame {
 
         add(hasilPanel, BorderLayout.EAST);
 
-        // Event Hitung
+        
         btnHitung.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -87,14 +87,14 @@ public class MainFrame extends JFrame {
                     double l = Double.parseDouble(tfLebar.getText());
                     double t = Double.parseDouble(tfTinggi.getText());
 
-                    // Anggap panjang = sisi persegi
+                    
                     double s = p;
 
-                    // Persegi
+                    
                     double luas = s * s;
                     double keliling = 4 * s;
 
-                    // Balok (alas persegi)
+                    
                     double volume = p * l * t;
                     double luasPermukaan = 2 * (p*l + p*t + l*t);
 
@@ -109,7 +109,7 @@ public class MainFrame extends JFrame {
             }
         });
 
-        // Event Reset
+        
         btnReset.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 tfPanjang.setText("");
